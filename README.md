@@ -21,13 +21,13 @@
             context.browser.quit()
             context.browser = None
 
-9. Create a new file named `helloworld.feature` file with features below:
+9. Create a new file named `helloworld.feature` file inside the `features` directory with feature below:
 
-      Feature: Hello World
+        Feature: Hello World
 
-        Scenario: The website says hello world
-          When I visit the website root url
-          Then the text 'Hello World!' is visible
+          Scenario: The website says hello world
+            When I visit the website root url
+            Then the text 'Hello World!' is visible
 
 
 10. Run the test with `python manage.py test hello`
