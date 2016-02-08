@@ -1,6 +1,7 @@
 # HelloWorld
 
 - Create a new virtual environment to work in
+- Git clone this repository
 - Pip install `Django`, and the BDD requirements `django-behave` and `splinter`
 - Create a django project with a single app named `hello`
 - Create a features directory in the app you created, and a steps directory inside the features directory
