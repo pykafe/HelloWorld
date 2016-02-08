@@ -29,9 +29,9 @@
 # Features
 
 ```
-Scenario: Hello World
+Feature: Hello World
 
-  Feature: The website says hello world
+  Scenario: The website says hello world
     When I visit the website root url
     Then the text 'Hello World!' is visible
 ```
