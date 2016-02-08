@@ -13,7 +13,10 @@
       from splinter.browser import Browser
       
       def before_all(context):
-          context.browser = Browser(context.config.browser)
+          browser = context.config.browser
+          if browser is None:
+              browser = 'phantomjs'
+          context.browser = Browser(browser)
       
       def after_all(context):
           context.browser.quit()
