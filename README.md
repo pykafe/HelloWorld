@@ -31,6 +31,21 @@
 
 
 10. Run the test with `python manage.py test hello`
-11. Copy the suggested step implementations into `features/steps/helloworld.py`
+11. Create a new file named `helloworld.py` in the `features/steps/` directory.
+12. In `helloworld.py` import from behave and then copy the suggested step implementations into `features/steps/helloworld.py`:
+
+        from behave import *
+
+
+        @when(u'I visit the website root url')
+        def impl(context):
+            context.browser.visit(context.config.server_url)
+
+
+        @then(u"the text 'Hello World!' is visible")
+        def impl(context):
+            assert context.browser.find_by_text('Hello World!')
+
+
 12. Implement the steps with meaningful python code
 13. Satisfy the test so it passes
