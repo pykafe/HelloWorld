@@ -1,4 +1,4 @@
-from behave import *
+from behave import then, when
 
 
 @when(u'I visit the website root url')
@@ -6,11 +6,7 @@ def impl(context):
     context.browser.visit(context.config.server_url)
 
 
-@then(u"the text 'Hello World!' is visible")
+@then(u"some text is visible")  # noqa
 def impl(context):
-    assert context.browser.find_by_text('Hello World!')
-
-
-@then(u"The text shows 'Hello Mariano'")
-def impl(context):
-        assert context.browser.find_by_text('Hello Mariano')
+    for row in context.table:
+        assert context.browser.find_by_text(row['text'])
