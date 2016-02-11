@@ -9,3 +9,8 @@ def impl(context):
 @then(u"the text 'Hello World!' is visible")
 def impl(context):
     assert context.browser.find_by_text('Hello World!')
+
+
+@then(u"The text shows 'Hello Mariano'")
+def impl(context):
+        assert context.browser.find_by_text('Hello Mariano')

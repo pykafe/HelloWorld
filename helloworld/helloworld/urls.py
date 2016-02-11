@@ -17,5 +17,5 @@ from django.conf.urls import url
 from hello.views import Index
 
 urlpatterns = [
-    url(r'^', Index.as_view()),
+    url(r'^$', Index.as_view()),
 ]
