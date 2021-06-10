@@ -1,5 +1,5 @@
 behave==1.2.5
-Django==1.9.2
+Django==2.2.24
 django-behave==0.1.5
 enum34==1.1.2
 parse==1.6.6
